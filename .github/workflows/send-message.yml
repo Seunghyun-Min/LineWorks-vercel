@@ -1,0 +1,13 @@
+name: Send LINEWORKS Messages
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  send_messages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel API
+        run: |
+          curl -X GET https://line-works-message-reservation.vercel.app/api/sendMessage
