@@ -1,10 +1,5 @@
 {
   "version": 2,
-  "functions": {
-    "api/sendMessage/route.ts": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "crons": [
     {
       "path": "/api/sendMessage",
